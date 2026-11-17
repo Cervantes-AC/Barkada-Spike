@@ -1,0 +1,21 @@
+[gd_resource load_steps=2 format=3 uid="2000000003"]
+
+[ext_resource path="res://resources/tournaments/tournament_data.gd" type="Script" uid="2000000002"]
+
+resource_name = "School League"
+script = ExtResource("2000000002")
+
+tournament_id = "school"
+display_name = "School League"
+unlock_cost = 0
+is_unlocked = false
+matches_completed = 0
+is_completed = false
+reward_coins = 200
+difficulty = 1  # MEDIUM
+
+opponent_teams = [
+    { "team_name": "Central High", "difficulty": 1, "ai_setter_name": "Yuna", "ai_defender_name": "Jiro", "ai_attacker_name": "Mika" },
+    { "team_name": "Southside Prep", "difficulty": 1, "ai_setter_name": "Ren", "ai_defender_name": "Jiro", "ai_attacker_name": "Dax" },
+    { "team_name": "Capital Academy", "difficulty": 2, "ai_setter_name": "Yuna", "ai_defender_name": "Jiro", "ai_attacker_name": "Dax" }
+]

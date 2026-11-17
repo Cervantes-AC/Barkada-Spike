@@ -1,0 +1,21 @@
+[gd_resource load_steps=2 format=3 uid="2000000006"]
+
+[ext_resource path="res://resources/tournaments/tournament_data.gd" type="Script" uid="2000000002"]
+
+resource_name = "Grand Finals"
+script = ExtResource("2000000002")
+
+tournament_id = "grand_finals"
+display_name = "Grand Finals"
+unlock_cost = 0
+is_unlocked = false
+matches_completed = 0
+is_completed = false
+reward_coins = 500
+difficulty = 2  # HARD
+
+opponent_teams = [
+    { "team_name": "Champion X", "difficulty": 2, "ai_setter_name": "Yuna", "ai_defender_name": "Jiro", "ai_attacker_name": "Dax" },
+    { "team_name": "Champion Y", "difficulty": 2, "ai_setter_name": "Ren", "ai_defender_name": "Jiro", "ai_attacker_name": "Mika" },
+    { "team_name": "Champion Z", "difficulty": 2, "ai_setter_name": "Yuna", "ai_defender_name": "Jiro", "ai_attacker_name": "Dax" }
+]

@@ -1,0 +1,24 @@
+[gd_resource load_steps=2 format=3 uid="1000000004"]
+
+[ext_resource path="res://resources/characters/character_data.gd" type="Script" uid="1000000002"]
+
+resource_name = "Jiro"
+script = ExtResource("1000000002")
+
+character_id = "jiro"
+display_name = "Jiro"
+role = "defender"
+unlocked = false
+level = 1
+experience = 0
+experience_to_next = 100
+spike_power = 0.7
+jump = 0.8
+speed = 1.0
+control = 1.1
+stamina = 1.2
+defense = 1.4
+color = Color(1.0, 0.6, 0.2, 1.0)
+ability_name = "Iron Receive"
+ability_description = "Strong receiving that keeps rallies alive."
+unlock_cost = 200

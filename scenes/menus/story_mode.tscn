@@ -1,0 +1,80 @@
+[gd_scene load_steps=7 format=3 uid="3000000002"]
+
+[ext_resource type="Script" path="res://scripts/ui/story_mode.gd" uid="7000000002"]
+
+[node name="StoryMode" type="Control"]
+script = ExtResource("7000000002")
+anchors_preset = 15
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+size = Vector2(1280, 720)
+
+[node name="Background" type="ColorRect" parent="."]
+size = Vector2(1280, 720)
+color = Color(0.10, 0.15, 0.25, 1.0)
+
+[node name="TitleLabel" type="Label" parent="."]
+position = Vector2(40, 20)
+size = Vector2(400, 40)
+text = "Story Mode"
+custom_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 36
+
+[node name="BackButton" type="Button" parent="."]
+position = Vector2(1120, 20)
+size = Vector2(140, 40)
+text = "Back"
+theme_override_font_sizes/font_size = 20
+
+[node name="TournamentsContainer" type="ScrollContainer" parent="."]
+position = Vector2(40, 80)
+size = Vector2(1200, 600)
+
+[node name="TournamentsList" type="VBoxContainer" parent="TournamentsContainer"]
+size = Vector2(1180, 1)
+custom_constants/separation = 20
+alignment = 2
+
+# Tournament card template (instanced in code)
+[node name="TournamentCardTemplate" type="Control" parent="."]
+visible = false
+anchors_preset = 15
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 1.0
+anchor_bottom = 0.0
+size = Vector2(1180, 110)
+
+[node name="CardBg" type="ColorRect" parent="TournamentCardTemplate"]
+size = Vector2(1180, 110)
+color = Color(0.2, 0.25, 0.35, 1.0)
+
+[node name="CardName" type="Label" parent="TournamentCardTemplate"]
+position = Vector2(20, 10)
+size = Vector2(400, 30)
+text = "Tournament Name"
+custom_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 24
+
+[node name="CardStatus" type="Label" parent="TournamentCardTemplate"]
+position = Vector2(20, 45)
+size = Vector2(400, 24)
+text = "Locked"
+custom_colors/font_color = Color(1, 0.3, 0.3, 1)
+theme_override_font_sizes/font_size = 18
+
+[node name="CardMatches" type="Label" parent="TournamentCardTemplate"]
+position = Vector2(20, 72)
+size = Vector2(400, 24)
+text = "Matches: 0/3"
+custom_colors/font_color = Color(0.8, 0.9, 1, 1)
+theme_override_font_sizes/font_size = 16
+
+[node name="CardStartButton" type="Button" parent="TournamentCardTemplate"]
+position = Vector2(980, 30)
+size = Vector2(180, 50)
+text = "Start Match 1"
+theme_override_font_sizes/font_size = 18
+disabled = true

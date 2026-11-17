@@ -1,0 +1,24 @@
+[gd_resource load_steps=2 format=3 uid="1000000001"]
+
+[ext_resource path="res://resources/characters/character_data.gd" type="Script" uid="1000000002"]
+
+resource_name = "Kai"
+script = ExtResource("1000000002")
+
+character_id = "kai"
+display_name = "Kai"
+role = "attacker"
+unlocked = true
+level = 1
+experience = 0
+experience_to_next = 100
+spike_power = 1.0
+jump = 1.0
+speed = 1.0
+control = 1.0
+stamina = 1.0
+defense = 1.0
+color = Color(0.30, 0.65, 1.0, 1.0)
+ability_name = "Rising Spike"
+ability_description = "A balanced, beginner-friendly attacker with a rising spike."
+unlock_cost = 0

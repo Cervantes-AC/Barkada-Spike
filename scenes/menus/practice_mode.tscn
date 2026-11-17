@@ -1,0 +1,49 @@
+[gd_scene load_steps=5 format=3 uid="3000000004"]
+
+[ext_resource type="Script" path="res://scripts/ui/practice_mode.gd" uid="7000000004"]
+
+[node name="PracticeMode" type="Control"]
+script = ExtResource("7000000004")
+anchors_preset = 15
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+size = Vector2(1280, 720)
+
+[node name="Background" type="ColorRect" parent="."]
+size = Vector2(1280, 720)
+color = Color(0.10, 0.15, 0.25, 1.0)
+
+[node name="TitleLabel" type="Label" parent="."]
+position = Vector2(40, 20)
+size = Vector2(400, 40)
+text = "Practice Mode"
+custom_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 36
+
+[node name="BackButton" type="Button" parent="."]
+position = Vector2(1120, 20)
+size = Vector2(140, 40)
+text = "Back"
+theme_override_font_sizes/font_size = 20
+
+[node name="InfoLabel" type="Label" parent="."]
+position = Vector2(60, 100)
+size = Vector2(600, 120)
+text = "Practice movement, jumping, spiking, and timing.\nNo full match required.\n\nControls:\nA/D: Move   SPACE: Jump   S: Spike   Q/E: Aim"
+custom_colors/font_color = Color(0.9, 0.9, 0.9, 1)
+theme_override_font_sizes/font_size = 18
+
+[node name="BtnStartPractice" type="Button" parent="."]
+position = Vector2(490, 280)
+size = Vector2(300, 60)
+text = "Start Practice"
+theme_override_font_sizes/font_size = 24
+
+[node name="CoinsLabel" type="Label" parent="."]
+position = Vector2(20, 680)
+size = Vector2(200, 30)
+text = "Coins: 0"
+custom_colors/font_color = Color(1, 0.9, 0.2, 1)
+theme_override_font_sizes/font_size = 18

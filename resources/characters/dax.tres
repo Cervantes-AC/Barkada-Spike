@@ -1,0 +1,24 @@
+[gd_resource load_steps=2 format=3 uid="1000000006"]
+
+[ext_resource path="res://resources/characters/character_data.gd" type="Script" uid="1000000002"]
+
+resource_name = "Dax"
+script = ExtResource("1000000002")
+
+character_id = "dax"
+display_name = "Dax"
+role = "attacker"
+unlocked = false
+level = 1
+experience = 0
+experience_to_next = 100
+spike_power = 1.4
+jump = 0.9
+speed = 0.8
+control = 0.8
+stamina = 1.1
+defense = 0.9
+color = Color(1.0, 0.4, 0.4, 1.0)
+ability_name = "Heavy Impact"
+ability_description = "High spike power, slower movement."
+unlock_cost = 400

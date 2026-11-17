@@ -1,0 +1,24 @@
+[gd_resource load_steps=2 format=3 uid="1000000007"]
+
+[ext_resource path="res://resources/characters/character_data.gd" type="Script" uid="1000000002"]
+
+resource_name = "Yuna"
+script = ExtResource("1000000002")
+
+character_id = "yuna"
+display_name = "Yuna"
+role = "setter"
+unlocked = false
+level = 1
+experience = 0
+experience_to_next = 100
+spike_power = 0.8
+jump = 1.0
+speed = 1.1
+control = 1.4
+stamina = 1.0
+defense = 0.9
+color = Color(0.9, 0.6, 0.2, 1.0)
+ability_name = "Perfect Tempo"
+ability_description = "Consistent setting with perfect timing."
+unlock_cost = 350

@@ -1,0 +1,21 @@
+[gd_resource load_steps=2 format=3 uid="2000000001"]
+
+[ext_resource path="res://resources/tournaments/tournament_data.gd" type="Script" uid="2000000002"]
+
+resource_name = "Rookie Tournament"
+script = ExtResource("2000000002")
+
+tournament_id = "rookie"
+display_name = "Rookie Tournament"
+unlock_cost = 0
+is_unlocked = true
+matches_completed = 0
+is_completed = false
+reward_coins = 150
+difficulty = 0  # EASY
+
+opponent_teams = [
+    { "team_name": "Eastside Eagles", "difficulty": 0, "ai_setter_name": "Ren", "ai_defender_name": "Jiro", "ai_attacker_name": "Dax" },
+    { "team_name": "Northview Nets", "difficulty": 0, "ai_setter_name": "Yuna", "ai_defender_name": "Jiro", "ai_attacker_name": "Dax" },
+    { "team_name": "Westwood Spikers", "difficulty": 1, "ai_setter_name": "Ren", "ai_defender_name": "Jiro", "ai_attacker_name": "Dax" }
+]

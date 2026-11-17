@@ -1,0 +1,80 @@
+[gd_scene load_steps=6 format=3 uid="3000000001"]
+
+[ext_resource type="Script" path="res://scripts/ui/main_menu.gd" uid="7000000001"]
+
+[node name="MainMenu" type="Control"]
+script = ExtResource("7000000001")
+anchors_preset = 15
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+size = Vector2(1280, 720)
+
+[node name="Background" type="ColorRect" parent="."]
+size = Vector2(1280, 720)
+color = Color(0.10, 0.15, 0.25, 1.0)
+
+[node name="TitleContainer" type="VBoxContainer" parent="."]
+position = Vector2(440, 80)
+size = Vector2(400, 200)
+alignment = 2
+
+[node name="TitleLabel" type="Label" parent="TitleContainer"]
+text = "BARKADA SPIKE"
+size = Vector2(400, 80)
+custom_colors/font_color = Color(1, 1, 1, 1)
+custom_colors/font_outline_color = Color(0, 0, 0, 1)
+custom_colors/font_outline_size = 3
+theme_override_font_sizes/font_size = 48
+alignment = 2
+
+[node name="SubtitleLabel" type="Label" parent="TitleContainer"]
+text = "Anime Volleyball Arcade"
+size = Vector2(400, 40)
+custom_colors/font_color = Color(0.8, 0.9, 1, 1)
+theme_override_font_sizes/font_size = 20
+alignment = 2
+
+[node name="ButtonContainer" type="VBoxContainer" parent="."]
+position = Vector2(490, 320)
+size = Vector2(300, 260)
+alignment = 2
+custom_constants/separation = 15
+
+[node name="BtnStory" type="Button" parent="ButtonContainer"]
+text = "Story Mode"
+size = Vector2(300, 50)
+theme_override_font_sizes/font_size = 24
+
+[node name="BtnQuickMatch" type="Button" parent="ButtonContainer"]
+text = "Quick Match"
+size = Vector2(300, 50)
+theme_override_font_sizes/font_size = 24
+
+[node name="BtnPractice" type="Button" parent="ButtonContainer"]
+text = "Practice Mode"
+size = Vector2(300, 50)
+theme_override_font_sizes/font_size = 24
+
+[node name="BtnSettings" type="Button" parent="ButtonContainer"]
+text = "Settings"
+size = Vector2(300, 50)
+theme_override_font_sizes/font_size = 24
+
+[node name="BtnExit" type="Button" parent="ButtonContainer"]
+text = "Exit"
+size = Vector2(300, 50)
+theme_override_font_sizes/font_size = 24
+
+[node name="BtnOnline" type="Button" parent="ButtonContainer"]
+text = "Online 1v1"
+size = Vector2(300, 50)
+theme_override_font_sizes/font_size = 24
+
+[node name="VersionLabel" type="Label" parent="."]
+position = Vector2(20, 690)
+size = Vector2(200, 20)
+text = "v0.7.0 Milestone 7"
+custom_colors/font_color = Color(0.5, 0.6, 0.7, 1)
+theme_override_font_sizes/font_size = 14

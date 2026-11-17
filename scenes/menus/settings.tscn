@@ -1,0 +1,71 @@
+[gd_scene load_steps=5 format=3 uid="3000000005"]
+
+[ext_resource type="Script" path="res://scripts/ui/settings.gd" uid="7000000005"]
+
+[node name="Settings" type="Control"]
+script = ExtResource("7000000005")
+anchors_preset = 15
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+size = Vector2(1280, 720)
+
+[node name="Background" type="ColorRect" parent="."]
+size = Vector2(1280, 720)
+color = Color(0.10, 0.15, 0.25, 1.0)
+
+[node name="TitleLabel" type="Label" parent="."]
+position = Vector2(40, 20)
+size = Vector2(200, 40)
+text = "Settings"
+custom_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 36
+
+[node name="BackButton" type="Button" parent="."]
+position = Vector2(1120, 20)
+size = Vector2(140, 40)
+text = "Back"
+theme_override_font_sizes/font_size = 20
+
+[node name="MusicContainer" type="HBoxContainer" parent="."]
+position = Vector2(60, 100)
+size = Vector2(500, 60)
+alignment = 2
+custom_constants/separation = 20
+
+[node name="MusicLabel" type="Label" parent="MusicContainer"]
+text = "Music Volume"
+custom_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 20
+
+[node name="MusicSlider" type="HSlider" parent="MusicContainer"]
+size = Vector2(300, 30)
+min = 0.0
+max = 1.0
+step = 0.05
+value = 0.7
+
+[node name="SFXContainer" type="HBoxContainer" parent="."]
+position = Vector2(60, 180)
+size = Vector2(500, 60)
+alignment = 2
+custom_constants/separation = 20
+
+[node name="SfxLabel" type="Label" parent="SFXContainer"]
+text = "SFX Volume"
+custom_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 20
+
+[node name="SfxSlider" type="HSlider" parent="SFXContainer"]
+size = Vector2(300, 30)
+min = 0.0
+max = 1.0
+step = 0.05
+value = 0.8
+
+[node name="ResetSaveButton" type="Button" parent="."]
+position = Vector2(60, 280)
+size = Vector2(200, 40)
+text = "Reset Save Data"
+theme_override_font_sizes/font_size = 18

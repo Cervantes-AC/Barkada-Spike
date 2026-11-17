@@ -1,0 +1,21 @@
+[gd_resource load_steps=2 format=3 uid="2000000005"]
+
+[ext_resource path="res://resources/tournaments/tournament_data.gd" type="Script" uid="2000000002"]
+
+resource_name = "National Championship"
+script = ExtResource("2000000002")
+
+tournament_id = "national"
+display_name = "National Championship"
+unlock_cost = 0
+is_unlocked = false
+matches_completed = 0
+is_completed = false
+reward_coins = 300
+difficulty = 2  # HARD
+
+opponent_teams = [
+    { "team_name": "National Blue", "difficulty": 2, "ai_setter_name": "Yuna", "ai_defender_name": "Jiro", "ai_attacker_name": "Dax" },
+    { "team_name": "National Red", "difficulty": 2, "ai_setter_name": "Ren", "ai_defender_name": "Jiro", "ai_attacker_name": "Mika" },
+    { "team_name": "National Gold", "difficulty": 2, "ai_setter_name": "Yuna", "ai_defender_name": "Jiro", "ai_attacker_name": "Dax" }
+]

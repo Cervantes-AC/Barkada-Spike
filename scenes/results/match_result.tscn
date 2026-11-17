@@ -1,0 +1,56 @@
+[gd_scene load_steps=5 format=3 uid="4000000001"]
+
+[ext_resource type="Script" path="res://scripts/ui/match_result.gd" uid="8000000001"]
+
+[node name="MatchResult" type="Control"]
+script = ExtResource("8000000001")
+anchors_preset = 15
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+size = Vector2(1280, 720)
+
+[node name="Background" type="ColorRect" parent="."]
+size = Vector2(1280, 720)
+color = Color(0.10, 0.15, 0.25, 1.0)
+
+[node name="ResultTitle" type="Label" parent="."]
+position = Vector2(440, 100)
+size = Vector2(400, 80)
+text = "VICTORY"
+custom_colors/font_color = Color(0.4, 1, 0.4, 1)
+custom_colors/font_outline_color = Color(0, 0, 0, 1)
+custom_colors/font_outline_size = 2
+theme_override_font_sizes/font_size = 60
+alignment = 2
+
+[node name="ScoreLabel" type="Label" parent="."]
+position = Vector2(440, 200)
+size = Vector2(400, 40)
+text = "KAI 0 - 0 OPPONENT"
+custom_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 32
+alignment = 2
+
+[node name="RewardLabel" type="Label" parent="."]
+position = Vector2(440, 260)
+size = Vector2(400, 40)
+text = "Coins Earned: 0"
+custom_colors/font_color = Color(1, 0.9, 0.2, 1)
+theme_override_font_sizes/font_size = 24
+alignment = 2
+
+[node name="PerfectLabel" type="Label" parent="."]
+position = Vector2(440, 310)
+size = Vector2(400, 30)
+text = "Perfect Spikes: 0"
+custom_colors/font_color = Color(0.2, 1, 0.2, 1)
+theme_override_font_sizes/font_size = 18
+alignment = 2
+
+[node name="BtnContinue" type="Button" parent="."]
+position = Vector2(490, 400)
+size = Vector2(300, 60)
+text = "Continue"
+theme_override_font_sizes/font_size = 24

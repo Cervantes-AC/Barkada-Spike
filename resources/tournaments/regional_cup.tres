@@ -1,0 +1,21 @@
+[gd_resource load_steps=2 format=3 uid="2000000004"]
+
+[ext_resource path="res://resources/tournaments/tournament_data.gd" type="Script" uid="2000000002"]
+
+resource_name = "Regional Cup"
+script = ExtResource("2000000002")
+
+tournament_id = "regional"
+display_name = "Regional Cup"
+unlock_cost = 0
+is_unlocked = false
+matches_completed = 0
+is_completed = false
+reward_coins = 250
+difficulty = 1  # MEDIUM
+
+opponent_teams = [
+    { "team_name": "North Region Bulls", "difficulty": 1, "ai_setter_name": "Ren", "ai_defender_name": "Jiro", "ai_attacker_name": "Dax" },
+    { "team_name": "South Region Waves", "difficulty": 2, "ai_setter_name": "Yuna", "ai_defender_name": "Jiro", "ai_attacker_name": "Mika" },
+    { "team_name": "Capital Region Titans", "difficulty": 2, "ai_setter_name": "Yuna", "ai_defender_name": "Jiro", "ai_attacker_name": "Dax" }
+]
