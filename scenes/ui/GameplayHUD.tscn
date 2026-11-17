@@ -1,0 +1,59 @@
+[gd_scene load_steps=4 format=3 uid="c3d4e5f6-a7b8-9012-cdef-345678901234"]
+
+[ext_resource type="Script" path="res://scripts/ui/gameplay_hud.gd" uid="4000000001"]
+
+[node name="GameplayHUD" type="CanvasLayer"]
+script = ExtResource("4000000001")
+
+[node name="ScoreLabel" type="Label" parent="."]
+text = "KAI 0 - 0 OPPONENT"
+position = Vector2(450, 22)
+size = Vector2(380, 40)
+custom_colors/font_color = Color(1, 1, 1, 1)
+custom_colors/font_outline_color = Color(0, 0, 0, 1)
+custom_colors/font_outline_size = 2
+theme_override_font_sizes/font_size = 32
+
+[node name="PhaseLabel" type="Label" parent="."]
+text = "MATCH START"
+position = Vector2(450, 62)
+size = Vector2(380, 24)
+custom_colors/font_color = Color(0.8, 0.9, 1, 1)
+custom_colors/font_outline_color = Color(0, 0, 0, 1)
+custom_colors/font_outline_size = 1
+theme_override_font_sizes/font_size = 18
+
+[node name="TimingLabel" type="Label" parent="."]
+text = ""
+position = Vector2(540, 300)
+size = Vector2(200, 50)
+custom_colors/font_color = Color(1, 0.9, 0.2, 1)
+custom_colors/font_outline_color = Color(0, 0, 0, 1)
+custom_colors/font_outline_size = 3
+align = 2
+valign = 1
+visible = false
+theme_override_font_sizes/font_size = 32
+
+[node name="TouchCountLabel" type="Label" parent="."]
+text = "Touches: 0/3"
+position = Vector2(40, 22)
+size = Vector2(200, 30)
+custom_colors/font_color = Color(0.9, 0.9, 0.9, 1)
+custom_colors/font_outline_color = Color(0, 0, 0, 1)
+custom_colors/font_outline_size = 1
+theme_override_font_sizes/font_size = 18
+visible = false
+
+[node name="HintLabel" type="Label" parent="."]
+text = "A / D : Move   SPACE : Jump   S : Spike   Q / E : Aim"
+position = Vector2(40, 660)
+size = Vector2(700, 24)
+custom_colors/font_color = Color(0.9, 0.9, 0.9, 1)
+theme_override_font_sizes/font_size = 16
+
+[node name="PauseButton" type="Button" parent="."]
+text = "Pause"
+position = Vector2(1180, 20)
+size = Vector2(80, 32)
+theme_override_font_sizes/font_size = 16

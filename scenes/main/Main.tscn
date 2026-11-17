@@ -1,0 +1,73 @@
+[gd_scene load_steps=13 format=3 uid="e5f6a7b8-c9d0-1234-def5-678901234567"]
+
+[ext_resource type="PackedScene" path="res://scenes/match/Court.tscn" uid="5000000001"]
+[ext_resource type="PackedScene" path="res://scenes/characters/Kai.tscn" uid="5000000002"]
+[ext_resource type="PackedScene" path="res://scenes/ui/GameplayHUD.tscn" uid="5000000003"]
+[ext_resource type="PackedScene" path="res://scenes/match/Ball.tscn" uid="5000000004"]
+[ext_resource type="PackedScene" path="res://scenes/ui/MobileControls.tscn" uid="5000000005"]
+[ext_resource type="PackedScene" path="res://scenes/characters/Setter.tscn" uid="5000000006"]
+[ext_resource type="PackedScene" path="res://scenes/characters/Defender.tscn" uid="5000000007"]
+[ext_resource type="PackedScene" path="res://scenes/characters/Opponent.tscn" uid="5000000008"]
+[ext_resource type="PackedScene" path="res://scenes/characters/OpponentSetter.tscn" uid="5000000009"]
+[ext_resource type="PackedScene" path="res://scenes/characters/OpponentDefender.tscn" uid="5000000010"]
+[ext_resource type="PackedScene" path="res://scenes/effects/perfect_flash.tscn" uid="5000000011"]
+[ext_resource type="Script" path="res://scripts/main/main.gd" uid="6000000001"]
+[ext_resource type="Script" path="res://scripts/match/match_manager.gd" uid="6000000002"]
+[ext_resource type="Script" path="res://scripts/match/volleyball_rules.gd" uid="6000000003"]
+[ext_resource type="Script" path="res://scripts/ai/team_ai_controller.gd" uid="6000000004"]
+[ext_resource type="Script" path="res://scripts/ai/opponent_ai_controller.gd" uid="6000000005"]
+
+[node name="Main" type="Node2D"]
+script = ExtResource("6000000001")
+
+[node name="Court" type="Node2D" parent="."]
+instance = ExtResource("5000000001")
+
+[node name="Ball" type="RigidBody2D" parent="."]
+instance = ExtResource("5000000004")
+position = Vector2(640, 300)
+
+[node name="Player" type="Node2D" parent="."]
+instance = ExtResource("5000000002")
+position = Vector2(340, 404)
+
+[node name="Setter" type="CharacterBody2D" parent="."]
+instance = ExtResource("5000000006")
+position = Vector2(550, 404)
+
+[node name="Defender" type="CharacterBody2D" parent="."]
+instance = ExtResource("5000000007")
+position = Vector2(400, 404)
+
+[node name="Opponent" type="CharacterBody2D" parent="."]
+instance = ExtResource("5000000008")
+position = Vector2(810, 404)
+
+[node name="OpponentSetter" type="CharacterBody2D" parent="."]
+instance = ExtResource("5000000009")
+position = Vector2(730, 404)
+
+[node name="OpponentDefender" type="CharacterBody2D" parent="."]
+instance = ExtResource("5000000010")
+position = Vector2(880, 404)
+
+[node name="PerfectFlash" type="ColorRect" parent="."]
+instance = ExtResource("5000000011")
+
+[node name="HUD" type="CanvasLayer" parent="."]
+instance = ExtResource("5000000003")
+
+[node name="MobileControls" type="CanvasLayer" parent="."]
+instance = ExtResource("5000000005")
+
+[node name="MatchManager" type="Node" parent="."]
+script = ExtResource("6000000002")
+
+[node name="VolleyballRules" type="Node" parent="."]
+script = ExtResource("6000000003")
+
+[node name="TeamAIController" type="Node" parent="."]
+script = ExtResource("6000000004")
+
+[node name="OpponentAIController" type="Node" parent="."]
+script = ExtResource("6000000005")
