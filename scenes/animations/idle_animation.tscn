@@ -1,0 +1,24 @@
+[gd_scene load_steps=3 format=3 uid="8000000001"]
+
+[ext_resource type="Script" path="res://scripts/managers/audio_manager.gd" uid="9000000001"]
+
+[node name="IdleAnimation" type="AnimationPlayer"]
+speed_scale = 1.0
+autoplay = "idle"
+
+[node name="AnimationLibrary" type="AnimationLibrary" parent="."]
+
+[node name="idle" type="Animation" parent="AnimationLibrary"]
+length = 2.0
+loop = true
+
+[node name="idle/tracks/0" type="AnimationTrack" parent="AnimationLibrary/idle"]
+type = 2
+object_path = "Visual"
+property = "scale"
+interp = 1
+keys = [
+    { "time": 0.0, "key": Vector2(1, 1) },
+    { "time": 1.0, "key": Vector2(1.02, 1.02) },
+    { "time": 2.0, "key": Vector2(1, 1) }
+]

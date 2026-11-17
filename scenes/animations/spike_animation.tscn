@@ -1,0 +1,47 @@
+[gd_scene load_steps=3 format=3 uid="8000000004"]
+
+[node name="SpikeAnimation" type="AnimationPlayer"]
+speed_scale = 1.0
+autoplay = "spike"
+
+[node name="AnimationLibrary" type="AnimationLibrary" parent="."]
+
+[node name="spike" type="Animation" parent="AnimationLibrary"]
+length = 0.5
+loop = false
+
+[node name="spike/tracks/0" type="AnimationTrack" parent="AnimationLibrary/spike"]
+type = 2
+object_path = "Visual"
+property = "position"
+interp = 1
+keys = [
+    { "time": 0.0, "key": Vector2(0, 0) },
+    { "time": 0.15, "key": Vector2(0, -60) },
+    { "time": 0.3, "key": Vector2(0, 20) },
+    { "time": 0.5, "key": Vector2(0, 0) }
+]
+
+[node name="spike/tracks/1" type="AnimationTrack" parent="AnimationLibrary/spike"]
+type = 2
+object_path = "Visual"
+property = "scale"
+interp = 1
+keys = [
+    { "time": 0.0, "key": Vector2(1, 1) },
+    { "time": 0.15, "key": Vector2(1.1, 0.9) },
+    { "time": 0.3, "key": Vector2(0.9, 1.1) },
+    { "time": 0.5, "key": Vector2(1, 1) }
+]
+
+[node name="spike/tracks/2" type="AnimationTrack" parent="AnimationLibrary/spike"]
+type = 2
+object_path = "Visual"
+property = "modulate"
+interp = 1
+keys = [
+    { "time": 0.0, "key": Color(1, 1, 1, 1) },
+    { "time": 0.15, "key": Color(1, 0.8, 0.8, 1) },
+    { "time": 0.3, "key": Color(1, 1, 1, 1) },
+    { "time": 0.5, "key": Color(1, 1, 1, 1) }
+]

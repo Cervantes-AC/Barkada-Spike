@@ -1,0 +1,33 @@
+[gd_scene load_steps=3 format=3 uid="8000000006"]
+
+[node name="ReceiveAnimation" type="AnimationPlayer"]
+speed_scale = 1.0
+autoplay = "receive"
+
+[node name="AnimationLibrary" type="AnimationLibrary" parent="."]
+
+[node name="receive" type="Animation" parent="AnimationLibrary"]
+length = 0.4
+loop = false
+
+[node name="receive/tracks/0" type="AnimationTrack" parent="AnimationLibrary/receive"]
+type = 2
+object_path = "Visual"
+property = "position"
+interp = 1
+keys = [
+    { "time": 0.0, "key": Vector2(0, 0) },
+    { "time": 0.2, "key": Vector2(0, 15) },
+    { "time": 0.4, "key": Vector2(0, 0) }
+]
+
+[node name="receive/tracks/1" type="AnimationTrack" parent="AnimationLibrary/receive"]
+type = 2
+object_path = "Visual"
+property = "modulate"
+interp = 1
+keys = [
+    { "time": 0.0, "key": Color(1, 1, 1, 1) },
+    { "time": 0.2, "key": Color(0.8, 0.9, 1, 1) },
+    { "time": 0.4, "key": Color(1, 1, 1, 1) }
+]

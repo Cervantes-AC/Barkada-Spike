@@ -1,0 +1,32 @@
+[gd_scene load_steps=3 format=3 uid="8000000010"]
+
+[node name="PerfectFlash" type="ColorRect"]
+color = Color(1, 1, 1, 0)
+size = Vector2(1280, 720)
+anchors_preset = 15
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+speed_scale = 1.0
+autoplay = "flash"
+
+[node name="AnimationLibrary" type="AnimationLibrary" parent="AnimationPlayer"]
+
+[node name="flash" type="Animation" parent="AnimationLibrary/AnimationLibrary"]
+length = 0.3
+loop = false
+
+[node name="flash/tracks/0" type="AnimationTrack" parent="AnimationLibrary/AnimationLibrary/flash"]
+type = 2
+object_path = ".."
+property = "color"
+interp = 1
+keys = [
+    { "time": 0.0, "key": Color(1, 1, 1, 0) },
+    { "time": 0.1, "key": Color(1, 1, 1, 0.6) },
+    { "time": 0.2, "key": Color(1, 1, 1, 0.3) },
+    { "time": 0.3, "key": Color(1, 1, 1, 0) }
+]

@@ -1,0 +1,33 @@
+[gd_scene load_steps=3 format=3 uid="8000000008"]
+
+[node name="BlockAnimation" type="AnimationPlayer"]
+speed_scale = 1.0
+autoplay = "block"
+
+[node name="AnimationLibrary" type="AnimationLibrary" parent="."]
+
+[node name="block" type="Animation" parent="AnimationLibrary"]
+length = 0.4
+loop = false
+
+[node name="block/tracks/0" type="AnimationTrack" parent="AnimationLibrary/block"]
+type = 2
+object_path = "Visual"
+property = "position"
+interp = 1
+keys = [
+    { "time": 0.0, "key": Vector2(0, 0) },
+    { "time": 0.2, "key": Vector2(0, -50) },
+    { "time": 0.4, "key": Vector2(0, 0) }
+]
+
+[node name="block/tracks/1" type="AnimationTrack" parent="AnimationLibrary/block"]
+type = 2
+object_path = "Visual"
+property = "scale"
+interp = 1
+keys = [
+    { "time": 0.0, "key": Vector2(1, 1) },
+    { "time": 0.2, "key": Vector2(1.15, 0.85) },
+    { "time": 0.4, "key": Vector2(1, 1) }
+]

@@ -1,0 +1,115 @@
+[gd_scene load_steps=8 format=3 uid="3000000007"]
+
+[ext_resource type="Script" path="res://scripts/ui/online_lobby.gd" uid="7000000007"]
+
+[node name="OnlineLobby" type="Control"]
+script = ExtResource("7000000007")
+anchors_preset = 15
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+size = Vector2(1280, 720)
+
+[node name="Background" type="ColorRect" parent="."]
+size = Vector2(1280, 720)
+color = Color(0.10, 0.15, 0.25, 1.0)
+
+[node name="TitleLabel" type="Label" parent="."]
+position = Vector2(40, 20)
+size = Vector2(300, 40)
+text = "Online 1v1"
+custom_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 36
+
+[node name="BackButton" type="Button" parent="."]
+position = Vector2(1120, 20)
+size = Vector2(140, 40)
+text = "Back"
+theme_override_font_sizes/font_size = 20
+
+[node name="HostContainer" type="VBoxContainer" parent="."]
+position = Vector2(100, 120)
+size = Vector2(500, 300)
+custom_constants/separation = 15
+alignment = 2
+
+[node name="HostLabel" type="Label" parent="HostContainer"]
+text = "Host Match"
+custom_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 24
+
+[node name="HostPortInput" type="LineEdit" parent="HostContainer"]
+placeholder_text = "Port (default 7000)"
+text = "7000"
+theme_override_font_sizes/font_size = 18
+
+[node name="BtnHost" type="Button" parent="HostContainer"]
+text = "Host Game"
+disabled = false
+theme_override_font_sizes/font_size = 20
+
+[node name="HostStatus" type="Label" parent="HostContainer"]
+text = ""
+custom_colors/font_color = Color(0.8, 0.9, 1, 1)
+theme_override_font_sizes/font_size = 16
+
+[node name="JoinContainer" type="VBoxContainer" parent="."]
+position = Vector2(680, 120)
+size = Vector2(500, 350)
+custom_constants/separation = 15
+alignment = 2
+
+[node name="JoinLabel" type="Label" parent="JoinContainer"]
+text = "Join Match"
+custom_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 24
+
+[node name="JoinAddressInput" type="LineEdit" parent="JoinContainer"]
+placeholder_text = "Server IP address"
+text = "127.0.0.1"
+theme_override_font_sizes/font_size = 18
+
+[node name="JoinPortInput" type="LineEdit" parent="JoinContainer"]
+placeholder_text = "Port (default 7000)"
+text = "7000"
+theme_override_font_sizes/font_size = 18
+
+[node name="BtnJoin" type="Button" parent="JoinContainer"]
+text = "Join Game"
+theme_override_font_sizes/font_size = 20
+
+[node name="JoinStatus" type="Label" parent="JoinContainer"]
+text = ""
+custom_colors/font_color = Color(0.8, 0.9, 1, 1)
+theme_override_font_sizes/font_size = 16
+
+[node name="ConnectionStatus" type="Label" parent="."]
+position = Vector2(100, 500)
+size = Vector2(1080, 60)
+text = "Disconnected"
+custom_colors/font_color = Color(1, 0.3, 0.3, 1)
+theme_override_font_sizes/font_size = 20
+alignment = 2
+
+[node name="BtnDisconnect" type="Button" parent="."]
+position = Vector2(950, 580)
+size = Vector2(200, 50)
+text = "Disconnect"
+disabled = true
+theme_override_font_sizes/font_size = 18
+
+[node name="CoinsLabel" type="Label" parent="."]
+position = Vector2(20, 680)
+size = Vector2(200, 30)
+text = "Coins: 0"
+custom_colors/font_color = Color(1, 0.9, 0.2, 1)
+theme_override_font_sizes/font_size = 18
+
+[node name="InfoLabel" type="Label" parent="."]
+position = Vector2(100, 650)
+size = Vector2(1080, 40)
+text = "Note: Online play works on LAN / same Wi-Fi. For internet play, port forward port 7000."
+custom_colors/font_color = Color(0.7, 0.7, 0.7, 1)
+theme_override_font_sizes/font_size = 14
+alignment = 2

@@ -1,0 +1,33 @@
+[gd_scene load_steps=3 format=3 uid="8000000007"]
+
+[node name="SetAnimation" type="AnimationPlayer"]
+speed_scale = 1.0
+autoplay = "set"
+
+[node name="AnimationLibrary" type="AnimationLibrary" parent="."]
+
+[node name="set" type="Animation" parent="AnimationLibrary"]
+length = 0.4
+loop = false
+
+[node name="set/tracks/0" type="AnimationTrack" parent="AnimationLibrary/set"]
+type = 2
+object_path = "Visual"
+property = "position"
+interp = 1
+keys = [
+    { "time": 0.0, "key": Vector2(0, 0) },
+    { "time": 0.2, "key": Vector2(0, -10) },
+    { "time": 0.4, "key": Vector2(0, 0) }
+]
+
+[node name="set/tracks/1" type="AnimationTrack" parent="AnimationLibrary/set"]
+type = 2
+object_path = "Visual"
+property = "modulate"
+interp = 1
+keys = [
+    { "time": 0.0, "key": Color(1, 1, 1, 1) },
+    { "time": 0.2, "key": Color(0.9, 1, 0.9, 1) },
+    { "time": 0.4, "key": Color(1, 1, 1, 1) }
+]

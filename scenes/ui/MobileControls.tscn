@@ -1,0 +1,71 @@
+[gd_scene load_steps=6 format=3 uid="d4e5f6a7-b8c9-0123-def4-567890123456"]
+
+[ext_resource type="Script" path="res://scripts/ui/mobile_controls.gd" uid="8000000001"]
+
+[node name="MobileControls" type="CanvasLayer"]
+script = ExtResource("8000000001")
+
+[node name="MoveLeft" type="Button" parent="."]
+text = "◀"
+position = Vector2(50, 600)
+size = Vector2(100, 90)
+custom_colors/font_color = Color(1, 1, 1, 1)
+custom_colors/font_outline_color = Color(0, 0, 0, 1)
+custom_colors/font_outline_size = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 32
+
+[node name="MoveRight" type="Button" parent="."]
+text = "▶"
+position = Vector2(160, 600)
+size = Vector2(100, 90)
+custom_colors/font_color = Color(1, 1, 1, 1)
+custom_colors/font_outline_color = Color(0, 0, 0, 1)
+custom_colors/font_outline_size = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 32
+
+[node name="Jump" type="Button" parent="."]
+text = "JUMP"
+position = Vector2(1040, 600)
+size = Vector2(110, 100)
+custom_colors/font_color = Color(0.2, 0.7, 1, 1)
+custom_colors/font_outline_color = Color(0, 0, 0, 1)
+custom_colors/font_outline_size = 2
+theme_override_colors/font_color = Color(0.2, 0.7, 1, 1)
+theme_override_font_sizes/font_size = 28
+
+[node name="Spike" type="Button" parent="."]
+text = "SPIKE"
+position = Vector2(1160, 600)
+size = Vector2(110, 100)
+custom_colors/font_color = Color(1, 0.3, 0.3, 1)
+custom_colors/font_outline_color = Color(0, 0, 0, 1)
+custom_colors/font_outline_size = 2
+theme_override_colors/font_color = Color(1, 0.3, 0.3, 1)
+theme_override_font_sizes/font_size = 28
+
+[node name="AimLeft" type="Button" parent="."]
+text = "◀"
+position = Vector2(1040, 510)
+size = Vector2(80, 70)
+custom_colors/font_color = Color(1, 1, 1, 1)
+custom_colors/font_outline_color = Color(0, 0, 0, 1)
+custom_colors/font_outline_size = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 24
+
+[node name="AimRight" type="Button" parent="."]
+text = "▶"
+position = Vector2(1180, 510)
+size = Vector2(80, 70)
+custom_colors/font_color = Color(1, 1, 1, 1)
+custom_colors/font_outline_color = Color(0, 0, 0, 1)
+custom_colors/font_outline_size = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 24
+
+[node name="Pause" type="Button" parent="."]
+text = "Pause"
+position = Vector2(1180, 20)
+size = Vector2(80, 32)
